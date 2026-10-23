@@ -24,7 +24,19 @@ README.md
 README_modelo.md
 ```
 
-Antes de começares os exercícios, cria um repositório vazio no teu GitHub para guardares o teu trabalho e liga-o ao projeto local como um remoto adicional. Como o clone já tem um remoto para o repositório base, dá um nome diferente ao teu remoto pessoal. Usa o remoto pessoal para enviar e sincronizar as tuas alterações.
+Antes de começares os exercícios, cria um repositório vazio no teu GitHub para guardares o teu trabalho. Depois, altera o remoto `origin` para que aponte para o teu repositório em vez do repositório base:
+
+```bash
+git remote set-url origin <url-do-teu-repositório>
+```
+
+Confirma que ficou correto:
+
+```bash
+git remote -v
+```
+
+Deves ver o URL do teu repositório nas linhas `fetch` e `push`. A partir daqui, o `origin` é o teu **remoto pessoal**, e é nele que deves enviar e sincronizar as tuas alterações.
 
 ---
 
@@ -34,7 +46,7 @@ Ativa o **Git LFS** e garante que o ficheiro grande é tratado corretamente.
 
 - Instala e configura o LFS.
 - Como a imagem já existe no histórico, garante que as versões anteriores também passam a ser geridas pelo LFS antes do primeiro envio para o teu remoto pessoal. Limita a migração aos ficheiros de imagem (`*.png`), sem migrar indiscriminadamente os restantes ficheiros do projeto.
-- A migração tem de abranger todo o histórico, incluindo os commits que já existem no repositório base. Por omissão, o `git lfs migrate` ignora commits que já estão num remoto, por isso tens de indicar explicitamente que queres migrar todas as referências.
+- A migração tem de abranger todo o histórico, incluindo os commits que vieram do repositório base. Por omissão, o `git lfs migrate` ignora commits que já existem em referências remotas, por isso tens de indicar explicitamente que queres migrar todas as referências.
 - Confirma que a migração criou o ficheiro `.gitattributes` com a regra para os ficheiros PNG e que o `large_image.png` passou a ser um ponteiro LFS.
 - Envia o repositório para o teu remoto pessoal, definindo-o como *upstream* da *main*. Assim, os `git pull` e `git push` seguintes passam a usar o remoto pessoal por omissão.
 - Confirma no GitHub se o ficheiro grande aparece como **“Stored with Git LFS”**.
@@ -103,7 +115,7 @@ Na branch *main*, observa os estados possíveis dos ficheiros.
 
 ## Exercício 6 - Repositório Remoto
 
-Pratica a sincronização entre o repositório local e o remoto pessoal criado na preparação.
+Pratica a sincronização entre o repositório local e o remoto pessoal configurado no início da aula.
 
 - Confirma que o repositório local está ligado ao teu remoto pessoal.
 - Envia para o GitHub os commits locais que ainda não foram enviados.
@@ -135,5 +147,3 @@ Combina todos os conceitos:
 - Verifica frequentemente o estado do repositório (`git status`).
 - Usa `git log --oneline --graph` para visualizar o histórico.
 - Mantém o repositório atualizado com `git pull`.
-
----
