@@ -143,6 +143,8 @@ Combina todos os conceitos:
 
 ### 💡 Sugestões
 
+Alteração feita diretamente no GitHub - Exercício 6
+
 - Garante que fazes **commits pequenos e descritivos**.
 - Verifica frequentemente o estado do repositório (`git status`).
 - Usa `git log --oneline --graph` para visualizar o histórico.
