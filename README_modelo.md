@@ -1,8 +1,8 @@
 # Dados do Aluno
 
-- **Nome:**  
-- **Número:**  
-- **Turma:**  
+- **AntonioCastanhas:**  
+- **22605189:**  
+- **Turno2:**  
 
 ---
 
