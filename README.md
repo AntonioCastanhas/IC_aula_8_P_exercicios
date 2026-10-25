@@ -149,3 +149,4 @@ Alteração feita diretamente no GitHub - Exercício 6
 - Verifica frequentemente o estado do repositório (`git status`).
 - Usa `git log --oneline --graph` para visualizar o histórico.
 - Mantém o repositório atualizado com `git pull`.
+Nova imagem assets Ex7
